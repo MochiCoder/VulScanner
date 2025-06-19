@@ -23,3 +23,15 @@ Day 3:
 Scan method is the main scannning function and uses Threadpool Executor for concurrency in scanning. 
 Returns list of open ports after running.
 Looking on things I can improve as the scanner is fully operational, going to make error cases and work on overall security hardening.
+
+Day 4-5:
+Looking at implementing something for error handling:
+something that would look like this:
+def validate_ip(self, ip):
+  try:
+  socket.inet_aton(ip)
+  return true
+except socket.error:
+  return false
+Also looking for something that will print the reports out and be able to time stamp it with datetime.
+Performance optimization is also something to look into and working on timeout configurations as well.
